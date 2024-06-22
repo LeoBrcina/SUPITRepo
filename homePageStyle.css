@@ -1,0 +1,181 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  overflow: hidden;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+}
+
+.navbarLeft {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px 16px;
+  font-size: 12px;
+}
+
+.navbarLeft:hover {
+  color: yellow;
+}
+
+h1 {
+  font-size: 60px;
+  z-index: 1;
+  text-wrap: nowrap;
+}
+
+h2 {
+  font-size: 60px;
+  z-index: 1;
+  color: #c54054;
+  text-align: left;
+}
+
+#cursor {
+  animation: blink 0.75s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 0%;
+  }
+}
+
+.videoText {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.video {
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactForm {
+  display: none;
+  background: white;
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contactForm form {
+  width: 100%;
+}
+
+.formInfo {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.formTitle h1 {
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+}
+
+.formInfo label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.formInfo input[type="text"],
+.formInfo input[type="email"],
+.formInfo select,
+.formInfo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.formInfo textarea {
+  resize: vertical;
+}
+
+.formButtons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formButtons button:not(:last-child) {
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  background-color: blue;
+  color: white;
+}
+
+button[type="button"] {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .navbarLeft {
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  h1,
+  h2 {
+    font-size: 40px;
+  }
+
+  .videoText {
+    top: 50%;
+  }
+
+  .contactForm {
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .formButtons button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

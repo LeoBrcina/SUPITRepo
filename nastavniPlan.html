@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nastavniPlan</title>
+
+    <link rel="stylesheet" href="nastavniPlanStyle.css">
+    <script src="https://kit.fontawesome.com/8f047d1989.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <header class="navbar">
+
+        <a class="navbarLeft" href="loginPage.html" id="loginButton">Prijavi se <i class="fa-solid fa-right-to-bracket"
+                style="color: blue;"></i></a>
+
+        <a class="navbarLeft" id="logoutButton" onclick="Logout()" style="display: none;"><i
+                class="fa-solid fa-right-to-bracket" style="color: skyblue;"></i> Odjavi se</a>
+
+        <a class="navbarLeft" href="homePage.html"><i class="fa-solid fa-house-chimney" style="color: orange"></i>
+            Početna</a>
+
+        <a class="navbarLeft" href="aboutUsPage.html"><i class="fa-solid fa-comments" style="color: orange"></i> O
+            nama</a>
+
+        <a class="navbarLeft" href="newsPage.html"><i class="fa-solid fa-circle-info" style="color: orange"></i>
+            Novosti</a>
+
+        <a class="navbarLeft" id="NP" href="nastavniPlan.html"><i class="fa-solid fa-circle-info"
+                style="color: orange;"></i> Nastavni Plan</a>
+
+        <a class="navbarLeft" onclick="openContact()"><i class="fa-solid fa-envelope" style="color: orange;"></i>
+            Kontakt</a>
+
+    </header>
+
+</head>
+
+<body>
+
+    <div class="contactForm" id="contactForm1">
+
+        <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="post">
+
+            <div class="formTitle">
+
+                <h1 class="formH1">Kontaktirajte nas</h1>
+
+            </div>
+
+            <div class="formInfo">
+
+                <label for="fullName">Puno ime</label>
+
+                <input type="text" id="fullName" name="fullName" required>
+
+            </div>
+
+            <div class="formInfo">
+
+                <label for="email">E-mail</label>
+
+                <input type="email" id="email" name="email" required>
+
+            </div>
+
+            <div class="formInfo">
+
+                <label for="messageImportance">Važnost poruke</label>
+
+                <select id="messageImportance" name="messageImportance">
+
+                    <option value="high">Visoka</option>
+
+                    <option value="medium">Srednja</option>
+
+                    <option value="low">Niska</option>
+
+                </select>
+
+            </div>
+
+            <div class="formInfo">
+
+                <label for="message">Poruka</label>
+
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+            </div>
+
+            <div class="formInfo">
+
+                <label for="newsletter">
+
+                    Želim primati obavijesti
+
+                    <input type="checkbox" id="newsletter" name="newsletter">
+
+                </label>
+
+            </div>
+
+            <div class="formButtons">
+
+                <button type="submit">Pošalji</button>
+
+                <button type="button" onclick="closeContact()" class="cancel-btn">Odustani</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="headerContainer">
+
+        <h1>Nastavni plan</h1>
+
+    </div>
+
+    <form action="" autocomplete="off">
+        <div id="autocomplete-wrapper" class="inputContainer">
+
+            <label for="nameKolegij">Naziv kolegija:</label>
+
+            <input idtype="text" id="nameKolegij" placeholder="Započnite unos naziva kolegija...">
+
+        </div>
+    </form>
+
+    <table id="kolegijiTable" hidden>
+        <thead>
+            <tr>
+                <th>Kolegij</th>
+                <th>ECTS</th>
+                <th>Sati</th>
+                <th>Predavanja</th>
+                <th>Vježbe</th>
+                <th>Tip</th>
+                <th>Uklanjanje</th>
+            </tr>
+        </thead>
+        <tbody id="kolegijiBody">
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Ukupno</td>
+                <td id="totalECTS">0</td>
+                <td id="totalHours">0</td>
+                <td id="totalLectures">0</td>
+                <td id="totalExercises">0</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+<footer class="bottomImg">
+
+    <h1>BUDI IZVRSTAN U ONOME ŠTO VOLIŠ</h1>
+
+    <h2>ZAISKRI</h2>
+
+    <img src="Images/zaiskri-bg.jpg" />
+
+    <script src="nastavniPlanScript.js"></script>
+
+    <script>
+        function openContact() {
+            document.getElementById("contactForm1").style.display = "flex";
+        }
+    </script>
+
+    <script>
+        function closeContact() {
+            document.getElementById("contactForm1").style.display = "none";
+        }
+    </script>
+
+</footer>
+
+</html>

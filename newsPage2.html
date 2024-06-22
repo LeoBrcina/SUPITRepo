@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>newsPage1</title>
+
+  <link rel="stylesheet" href="newsPage2Style.css">
+
+  <script src="https://kit.fontawesome.com/8f047d1989.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <header class="navbar">
+
+    <a class="navbarLeft" href="loginPage.html" id="loginButton">Prijavi se <i class="fa-solid fa-right-to-bracket"
+        style="color: blue;"></i></a>
+
+    <a class="navbarLeft" id="logoutButton" onclick="Logout()" style="display: none;"><i
+        class="fa-solid fa-right-to-bracket" style="color: skyblue;"></i> Odjavi se</a>
+
+    <a class="navbarLeft" href="homePage.html"><i class="fa-solid fa-house-chimney" style="color: orange"></i>
+      Početna</a>
+
+    <a class="navbarLeft" href="aboutUsPage.html"><i class="fa-solid fa-comments" style="color: orange"></i> O nama</a>
+
+    <a class="navbarLeft" href="newsPage.html"><i class="fa-solid fa-circle-info" style="color: orange"></i> Novosti</a>
+
+    <a class="navbarLeft" id="NP" href="nastavniPlan.html" style="display: none;"><i class="fa-solid fa-circle-info"
+        style="color: orange;"></i> Nastavni Plan</a>
+
+    <a class="navbarLeft" onclick="openContact()"><i class="fa-solid fa-envelope" style="color: orange;"></i>
+      Kontakt</a>
+
+  </header>
+
+</head>
+
+<body>
+
+  <div class="topImg">
+
+    <h1>Nagrađujemo izvrsnost: Objavljemo dobitnike stipendijskog natječaja šk. god. 2018./2019.</h1>
+
+    <img src="Images/novost2.jpg" />
+
+  </div>
+
+  <div class="parentContainer">
+
+    <h1>Stipendijski natječaj šk. god. 2018./2019.!</h1>
+
+  </div>
+
+  <div class="textContainerSpecial">
+
+    <p>Nakon velikog broja prijava koje smo primili, detaljnom
+      analizom i provjerom utvrdili smo dobitnike ovogodišnjeg
+      stipendijskog natječaja za maturante! Stipendiju u
+      vrijednosti od 10.000,00 kuna na potrošačkoj kartici
+      dobivaju: Heidi Sokolovski iz Zagreba - za najbolji
+      rezultat iz Matematike na A razini osvojila je
+      stipendiju u iznosu od 10.000,00 kn. Tereza Žugaj iz
+      Zagreba - za najbolji rezultat iz Matematike na B razini
+      osvojila je stipendiju u iznosu od 10.000,00 kn. Dalija
+      Romac iz Sinja - za najbolji rezultat iz Hrvatskog
+      jezika na A razini te dodatna 204 boda za rezultat iz
+      Matematike A i Engleskog jezika A osvojila je stipendiju
+      u iznosu od 10.000,00 kn. Ella Milinović iz Zagreba - za
+      najbolji rezultat iz Hrvatskog jezika na B razini
+      osvojila je stipendiju u iznosu od 10.000,00 kn. Borna
+      Skračić iz Zadra – za najbolji rezultat iz Engleskog
+      jezika na A razini osvojio je stipendiju u iznosu od
+      10.000,00 kn. Lukas Božić iz Umaga - za najbolji
+      rezultat iz Engleskog jezika na B razini osvojio je
+      stipendiju u iznosu od 10.000,00 kn.</p>
+
+  </div>
+
+  <div class="contactForm" id="contactForm1">
+
+    <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="post">
+
+      <div class="formTitle">
+
+        <h1 class="formH1">Kontaktirajte nas</h1>
+
+      </div>
+
+      <div class="formInfo">
+
+        <label for="fullName">Puno ime</label>
+
+        <input type="text" id="fullName" name="fullName" required>
+
+      </div>
+
+      <div class="formInfo">
+
+        <label for="email">E-mail</label>
+
+        <input type="email" id="email" name="email" required>
+
+      </div>
+
+      <div class="formInfo">
+
+        <label for="messageImportance">Važnost poruke</label>
+
+        <select id="messageImportance" name="messageImportance">
+
+          <option value="high">Visoka</option>
+
+          <option value="medium">Srednja</option>
+
+          <option value="low">Niska</option>
+
+        </select>
+
+      </div>
+
+      <div class="formInfo">
+
+        <label for="message">Poruka</label>
+
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+      </div>
+
+      <div class="formInfo">
+
+        <label for="newsletter">
+
+          Želim primati obavijesti
+
+          <input type="checkbox" id="newsletter" name="newsletter">
+
+        </label>
+
+      </div>
+
+      <div class="formButtons">
+
+        <button type="submit">Pošalji</button>
+
+        <button type="button" onclick="closeContact()" class="cancel-btn">Odustani</button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+
+<footer class="bottomImg">
+
+  <h1>BUDI IZVRSTAN U ONOME ŠTO VOLIŠ</h1>
+
+  <h2>ZAISKRI</h2>
+
+  <img src="Images/zaiskri-bg.jpg" />
+
+  <script src="hideNastavniPlanScript.js"></script>
+
+  <script>
+    function openContact() {
+      document.getElementById("contactForm1").style.display = "flex";
+    }
+  </script>
+
+  <script>
+    function closeContact() {
+      document.getElementById("contactForm1").style.display = "none";
+    }
+  </script>
+
+</footer>
+
+</html>
